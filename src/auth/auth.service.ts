@@ -20,6 +20,7 @@ export class AuthService {
       },
     });
     if (user) {
+      // you can apply guard check instead
       try {
         const valid = await argon.verify(
           user.hash,
